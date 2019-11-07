@@ -1,0 +1,140 @@
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .wrapper {
+        max-width: 500px;
+        width: 100%;
+        background: #fff;
+        margin-top: 40%;
+        margin-left: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 3px rgba(15, 181, 216, 0.6);
+    }
+
+    .wrapper .izquierda,
+    .wrapper .derecha {
+        width: 50%;
+        height: 100%;
+        padding: 30px;
+    }
+
+    .wrapper .parte_superior {
+        padding: 40px;
+        text-align: center;
+        position: relative;
+    }
+
+    .wrapper .parte_superior h1 {
+        margin-bottom: 20px;
+    }
+
+    .wrapper .parte_superior .campo_entrada {
+        margin-bottom: 12px;
+    }
+
+    .wrapper .parte_superior .campo_entrada input[type="text"] {
+        width: 100%;
+        background: #cdd8e5;
+        border: 0;
+        padding: 12px;
+        padding-left: 20px;
+        border-radius: 25px;
+    }
+
+    .wrapper .parte_superior .btn {
+        background: #41a7f2;
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 25px;
+        width: 55%;
+    }
+
+    .wrapper .parte_superior .btn a {
+        color: #fff;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .wrapper .bottom {
+        background: #41a7f2;
+        padding: 40px;
+    }
+
+    .wrapper .bottom h3 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .wrapper .bottom .social_icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper .bottom .social_icons .item {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        margin: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .aliados {
+        height: 60%;
+        width: 60%;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="parte_superior">
+        <h1>Regístrate</h1>
+        <form method="post" class="form">
+            <div asp-validation-summary="All"></div>
+            <div class="campo_entrada">
+                <input asp-for="Nombre" type="text" placeholder="Nombre" />
+                <span asp-validation-for="Nombre"></span>
+            </div>
+            <div class="campo_entrada">
+                <input asp-for="Apellido" type="text" placeholder="Apellido" />
+                <span asp-validation-for="Apellido"></span>
+            </div>
+            <div class="campo_entrada">
+                <input asp-for="Email" type="text" placeholder="E-mail" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div class="campo_entrada">
+                <input asp-for="VerificacionEmail" type="text" placeholder="Verificar E-mail" />
+                <span asp-validation-for="VerificacionEmail"></span>
+            </div>
+            <div class="campo_entrada">
+                <input asp-for="Contrasenia" type="text" placeholder="Contraseña" />
+                <span asp-validation-for="Contrasenia"></span>
+            </div>
+            <div class="btn">
+                <a href="#">Regístrate</a>
+            </div>
+        </form>
+    </div>
+    <div class="bottom">
+        <h3>Aliados</h3>
+        <div class="social_icons">
+            <div class="item"><img class="aliados" src="~/img/innexsa.png" /></div>
+            <div class="item"><img class="aliados" src="~/img/innovem.png" /></div>
+            <div class="item"><img class="aliados" src="~/img/sena.png" /></div>
+        </div>
+    </div>
+</div>

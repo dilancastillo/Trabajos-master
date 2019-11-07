@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Modelos de negocio digital</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #eee;
+        }
+
+        /* navbar */
+        .sidebar {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(images/20618.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 5px 7px 25px #999;
+        }
+
+        .bottom-border {
+            border-bottom: 1px groove #eee;
+        }
+        .sidebar-link{
+            transition: all .4s;
+        }
+        .sidebar-link:hover{
+            background-color: #444;
+            border-radius: 5px;
+        }
+        .current{
+            background-color: #16A085;
+            border-radius: 7px;
+            box-shadow: 2px 5px 10px #111;
+            transition: all .3s;
+        }
+        .current:hover{
+            background-color: #45B39D;
+            border-radius: 7px;
+            box-shadow: 2px 5px 20px #111;
+            transform: translateY(-1px);
+        }
+        .search-input{
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            border-bottom: 2px solid #999;
+            transition: all .4s;
+        }
+        .search-input:focus{
+            background: transparent;
+            box-shadow: none;
+            border-bottom: 2px solid #73C6B6;
+        }
+        .search-button{
+            border-radius: 50%;
+            padding: 10px 16px;
+            transition: all .4s;
+        }
+        .search-button:hover{
+            background-color: #eee;
+            transform: translateY(-1px);
+        }
+        .icon-parent{
+            position: relative;
+        }
+        .icon-bullet::after{
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 15px;
+            height: 12px;
+            width: 12px;
+            background-color: #16A085;
+            border-radius: 50%;
+        }
+        @media (max-width: 768px){
+            .sidebar{
+                position: static;
+                height: auto;
+            }
+            .top-navbar{
+                position: static;
+            }
+        }
+        /* fin del navbar */
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse"
+            data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- barra lateral -->
+                    <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+                        <a href="#"  class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">SENNOVA</a>
+                        <div class="bottom-border pb-3">
+                            <img src="images/funcionario.jpg" width="50" class="rounded-circle mr-3">
+                            <a href="#" class="text-white">Andrés Martínez</a>
+                        </div>
+                        <ul class="navbar-nav flex-column mt-4">
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 current">
+                                    <i class="fas fa-home text-light fa-lg mr-3"></i>
+                                    Corretaje
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-user text-light fa-lg mr-3"></i>
+                                    Publicitario
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-envelope text-light fa-lg mr-3"></i>
+                                    Infomediario
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-shopping-cart text-light fa-lg mr-3"></i>
+                                    Mercantil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-chart-line text-light fa-lg mr-3"></i>
+                                    Fabricante directo
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-chart-bar text-light fa-lg mr-3"></i>
+                                    Afiliados
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-table text-light fa-lg mr-3"></i>
+                                    Comunidad
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-wrench text-light fa-lg mr-3"></i>
+                                    Suscripción
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-white p-3 mb-2 sidebar-link">
+                                    <i class="fas fa-tile-alt text-light fa-lg mr-3"></i>
+                                    Utilidad
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- fin de barra lateral -->
+                    <!-- navegación superior -->
+                    <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h4 class="text-light text-uppercase mb-0">
+                                    Modelos de negocio
+                                </h4>
+                            </div>
+                            <div class="col-md-5">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control search-input" placeholder="Buscar...">
+                                        <button type="button" class="btn btn-white search-button"><i class="fas fa-search text-success"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item icon-parent">
+                                        <a href="" class="nav-link icon-bullet"><i class="fas fa-comments text-muted fa-lg"></i></a>
+                                    </li>
+                                    <li class="nav-item icon-parent">
+                                        <a href="" class="nav-link icon-bullet"><i class="fas fa-bell text-muted fa-lg"></i></a>
+                                    </li>
+                                    <li class="nav-item ml-md-auto">
+                                        <a href="" class="nav-link"><i class="fas fa-sign-out-alt text-success fa-lg"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin de navegación superior -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- fin del navbar -->
+
+    <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

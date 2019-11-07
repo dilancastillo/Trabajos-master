@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+        * {
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            background: #fcfeff;
+        }
+
+        .just_flex {
+            display: flex;
+        }
+
+        .main_container .navbar_container {
+            width: 100%;
+            background: #27AE60;
+            height: 55px;
+        }
+
+        .main_container .navbar_container .navbar {
+            width: 75%;
+            margin: 0 auto;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar_container .navbar .left_navbar {
+            align-items: center;
+        }
+
+        .navbar_container .navbar .logo a {
+            font-size: 24px;
+            color: #fff;
+            margin-right: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar_container .navbar .menu li a {
+            color: #cce3f3;
+            margin: 0 10px;
+            display: block;
+        }
+
+        .navbar_container .navbar .menu li a:hover {
+            color: #fff;
+        }
+
+        .navbar_container .navbar .right_navbar {
+            height: 100%;
+        }
+
+        .navbar_container .navbar .right_navbar a {
+            display: block;
+            height: 100%;
+            background: #fcfeff;
+            color: #27AE60;
+            padding: 18px 20px;
+        }
+        .login_container{
+            width: 800px;
+            height: 420px;
+            margin: 120px auto 0;
+            box-shadow: 0 0 3px #c0e3fb;
+        }
+        .login_container .city_img{
+            width: 400px;
+            background: url(images/city.jpg) no-repeat center center;
+            height: 100%;
+            background-size: cover;
+            position: relative;
+        }
+        .login_container .city_img:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #16A085;
+            opacity: 0.7;
+        }
+        .login_container .city_img p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 36px;
+        }
+        .login_container .login .title{
+            text-align: center;
+            padding: 20px 0;
+            font-size: 20px;
+            color:  #16A085;
+            border-bottom: 1px solid #e2e3e3;
+        }
+        .login_container .login .login_inputs{
+            padding: 38px 25px;
+        }
+        .login .login_inputs .input_field{
+            margin-bottom: 15px;
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+        .login .login_inputs .input_field:first-child{
+            margin-bottom: 25px;
+        }
+        .login .login_inputs .input_field .input{
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e2e3e3;
+            border-radius: 3px;
+            font-size: 16px;
+            outline: none;
+            padding: 25px 45px 10px 15px;
+        }
+        .login .login_inputs .input_field .input:focus{
+            border-color: #27AE60;
+        }
+        .login .login_inputs .input_field .label{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            color: #e2e3e3;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .login .login_inputs .input_field.active .label{
+            top: 30%;
+            font-size: 12px;
+        }
+        .login .remember_forget{
+            display: flex;
+            justify-content: space-between;
+        }
+        .remember_forget .checkbox_container{
+            display: block;
+            padding-left: 20px;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+        }
+        .remember_forget .checkbox_container input[type="checkbox"]{
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .remember_forget .checkbox_container .checkbox_mark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #cce3f3;
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+        .remember_forget .checkbox_container .checkbox_mark:before{
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 6px;
+            height: 2px;
+            border: 2px solid;
+            border-color: transparent transparent #fff #fff;
+            transform: rotate(-45deg);
+        }
+        .remember_forget .checkbox_container input[type="checkbox"]:checked ~ .checkbox_mark{
+            background: #27AE60;
+            border: 1px solid #27AE60;
+        }
+        .remember_forget .checkbox_container .checkbox_text{
+            color: #e2e3e3;
+        }
+        .remember_forget .forgot_pwd a{
+            color: #27AE60;
+        }
+        .remember_forget .forgot_pwd a:hover{
+            text-decoration: underline;
+        }
+        .login_btn a{
+            margin: 25px 0;
+            display: block;
+            width: 100%;
+            background: #27AE60;
+            color: #cce3f3;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 3px;
+        }
+        .login_btn a:hover{
+            color: #fff;
+        }
+        .new_account{
+            text-align: center;
+            color: #27AE60;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="navbar_container">
+            <div class="navbar just_flex">
+                <div class="left_navbar just_flex">
+                    <div class="logo">
+                        <a href="">Modelos de Negocio digital</a>
+                    </div>
+                    <ul class="menu just_flex">
+                        <li><a href="">Descargar</a></li>
+                        <li><a href="">Característica</a></li>
+                        <li><a href="">Fijación de precios</a></li>
+                        <li><a href="">Videos</a></li>
+                        <li><a href="">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="right_navbar">
+                    <a href="">Regístrate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login_container just_flex">
+        <div class="city_img">
+            <p>Sistema de investigación, desarrollo tecnológico e innovación</p>
+        </div>
+        <div class="login">
+            <div class="title">Iniciar sesión</div>
+            <div class="login_inputs">
+                <div class="input_field">
+                    <label class="label">
+                        E-mail
+                    </label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field">
+                    <label class="label">
+                        Contraseña
+                    </label>
+                    <input type="password" class="input">
+                </div>
+                <div class="remember_forget">
+                    <div class="remember_me">
+                        <label class="checkbox_container">
+                            <input type="checkbox">
+                            <span class="checkbox_mark"></span>
+                            <span class="checkbox_text">Recuérdame</span>
+                        </label>
+                    </div>
+                    <div class="forgot_pwd">
+                        <a href="#">Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+                <div class="login_btn">
+                    <a href="">Iniciar sesión</a>
+                </div>
+                <div class="new_account">
+                    Crear una nueva cuenta
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
