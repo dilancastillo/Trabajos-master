@@ -34,15 +34,15 @@
         const videoUrls = [
 		'images/hola.mp4'
 	];
-    // const bounds = L.latLngBounds([[ 5, -60], [ 3, -70]]);
+    const bounds = L.latLngBounds([[ 5, -60], [ 3, -70]]);
     const marker = L.marker([5.5, -73.36]).addTo(mymap);
 
-	const videoOverlay = L.videoOverlay( videoUrls, marker, {
+	const videoOverlay = L.videoOverlay( videoUrls, bounds, {
 		opacity: 0.8
 	}).addTo(mymap);
     console.log(videoOverlay);
 
-
+    // marker.bindPopup()
 
 
     videoOverlay.on('load', function () {
